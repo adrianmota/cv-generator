@@ -1,0 +1,8 @@
+hr {
+    margin-bottom: 6px;
+}
+
+.custom-list {
+    list-style: none;
+    margin-left: -30px;
+}
