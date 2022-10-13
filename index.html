@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Generator</title>
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
 </head>
 <body>
-    <h2>CV Generator</h2>
+    <h2 class="text-center text-danger">CV Generator</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Formulario</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-2">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input id="name" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="address" class="form-label">Dirección</label>
+                                <input id="address" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="email" class="form-label">Correo</label>
+                                <input id="email" type="email" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input id="phone" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="website" class="form-label">Página Web</label>
+                                <input id="website" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="summary" class="form-label">Resumen</label>
+                                <input id="summary" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="languages" class="form-label">Idiomas</label>
+                                <input id="languages" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="jobs" class="form-label">Empleos</label>
+                                <input id="jobs" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="education" class="form-label">Educación</label>
+                                <input id="education" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="skills" class="form-label">Habilidades</label>
+                                <input id="skills" type="text" class="form-control" />
+                            </div>
+                            <div class="mb-2">
+                                <label for="certifications" class="form-label">Certificaciones</label>
+                                <input id="certifications" type="text" class="form-control" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 bg-info"></div>
+        </div>
+    </div>
 </body>
 </html>
