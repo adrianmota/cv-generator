@@ -1,38 +1,3 @@
-function clearInputs(inputs) {
-    inputs.nameInput.value = '';
-    inputs.addressInput.value = '';
-    inputs.emailInput.value = '';
-    inputs.phoneInput.value = '';
-    inputs.websiteInput.value = '';
-    inputs.summaryInput.value = '';
-    inputs.languagesInput.value = '';
-    inputs.jobsInput.value = '';
-    inputs.educationInput.value = '';
-    inputs.skillsInput.value = '';
-    inputs.certificationsInput.value = '';
-    inputs.nameInput.classList.remove('border-success');
-    inputs.addressInput.classList.remove('border-success');
-    inputs.emailInput.classList.remove('border-success');
-    inputs.phoneInput.classList.remove('border-success');
-    inputs.websiteInput.classList.remove('border-success');
-    inputs.summaryInput.classList.remove('border-success');
-    inputs.languagesInput.classList.remove('border-success');
-    inputs.jobsInput.classList.remove('border-success');
-    inputs.educationInput.classList.remove('border-success');
-    inputs.skillsInput.classList.remove('border-success');
-    inputs.certificationsInput.classList.remove('border-success');
-}
-
-function generateList(data, element) {
-    for (const content of data) {
-        const listItem = document.createElement('li');
-        listItem.innerText = content;
-        if (element.id == 'experience-content')
-            listItem.classList.add('m-2', 'mt-0', 'mb-0');
-        element.appendChild(listItem);
-    }
-}
-
 function generateCv(data) {
     // `something` + Content makes reference to the HTML elements that show the data obtained from the form
     // `something` + Data makes reference to the data obtained from the form
@@ -47,6 +12,16 @@ function generateCv(data) {
     const educationContent = document.getElementById('education-content');
     const skillsContent = document.getElementById('skills-content');
     const certificationsContent = document.getElementById('certifications-content');
+
+    function generateList(data, element) {
+        for (const content of data) {
+            const listItem = document.createElement('li');
+            listItem.innerText = content;
+            if (element.id == 'experience-content')
+                listItem.classList.add('m-2', 'mt-0', 'mb-0');
+            element.appendChild(listItem);
+        }
+    }
 
     languagesContent.innerText = '';
     jobsContent.innerText = '';
@@ -127,7 +102,7 @@ function validateData() {
 
     let isValidated = true;
 
-    if (!nameInput.value || nameInput.value == null || nameInput.value == '') {
+    if (!nameInput.value || nameInput.value == '' || nameInput.value == null) {
         nameInput.classList.remove('border-success');
         nameInput.classList.add('border-danger');
         isValidated = false;
@@ -136,7 +111,7 @@ function validateData() {
         nameInput.classList.add('border-success');
     }
 
-    if (!addressInput.value || addressInput.value == null || addressInput.value == '') {
+    if (!addressInput.value || addressInput.value == '' || addressInput.value == null) {
         addressInput.classList.remove('border-success');
         addressInput.classList.add('border-danger');
         isValidated = false;
@@ -145,7 +120,7 @@ function validateData() {
         addressInput.classList.add('border-success');
     }
 
-    if (!emailInput.value || emailInput.value == null || emailInput.value == '') {
+    if (!emailInput.value || emailInput.value == '' || emailInput.value == null) {
         emailInput.classList.remove('border-success');
         emailInput.classList.add('border-danger');
         isValidated = false;
@@ -154,7 +129,7 @@ function validateData() {
         emailInput.classList.add('border-success');
     }
 
-    if (!phoneInput.value || phoneInput.value == null || phoneInput.value == '') {
+    if (!phoneInput.value || phoneInput.value == '' || phoneInput.value == null) {
         phoneInput.classList.remove('border-success');
         phoneInput.classList.add('border-danger');
         isValidated = false;
@@ -163,7 +138,7 @@ function validateData() {
         phoneInput.classList.add('border-success');
     }
 
-    if (!websiteInput.value || websiteInput.value == null || websiteInput.value == '') {
+    if (!websiteInput.value || websiteInput.value == '' || websiteInput.value == null) {
         websiteInput.classList.remove('border-success');
         websiteInput.classList.add('border-danger');
         isValidated = false;
@@ -172,7 +147,7 @@ function validateData() {
         websiteInput.classList.add('border-success');
     }
 
-    if (!summaryInput.value || summaryInput.value == null || summaryInput.value == '') {
+    if (!summaryInput.value || summaryInput.value == '' || summaryInput.value == null) {
         summaryInput.classList.remove('border-success');
         summaryInput.classList.add('border-danger');
         isValidated = false;
@@ -181,7 +156,7 @@ function validateData() {
         summaryInput.classList.add('border-success');
     }
 
-    if (!languagesInput.value || languagesInput.value == null || languagesInput.value == '') {
+    if (!languagesInput.value || languagesInput.value == '' || languagesInput.value == null) {
         languagesInput.classList.remove('border-success');
         languagesInput.classList.add('border-danger');
         isValidated = false;
@@ -190,7 +165,7 @@ function validateData() {
         languagesInput.classList.add('border-success');
     }
 
-    if (!jobsInput.value || jobsInput.value == null || jobsInput.value == '') {
+    if (!jobsInput.value || jobsInput.value == '' || jobsInput.value == null) {
         jobsInput.classList.remove('border-success');
         jobsInput.classList.add('border-danger');
         isValidated = false;
@@ -199,7 +174,7 @@ function validateData() {
         jobsInput.classList.add('border-success');
     }
 
-    if (!educationInput.value || educationInput.value == null || educationInput.value == '') {
+    if (!educationInput.value || educationInput.value == '' || educationInput.value == null) {
         educationInput.classList.remove('border-success');
         educationInput.classList.add('border-danger');
         isValidated = false;
@@ -208,7 +183,7 @@ function validateData() {
         educationInput.classList.add('border-success');
     }
 
-    if (!skillsInput.value || skillsInput.value == null || skillsInput.value == '') {
+    if (!skillsInput.value || skillsInput.value == '' || skillsInput.value == null) {
         skillsInput.classList.remove('border-success');
         skillsInput.classList.add('border-danger');
         isValidated = false;
@@ -217,7 +192,7 @@ function validateData() {
         skillsInput.classList.add('border-success');
     }
 
-    if (!certificationsInput.value || certificationsInput.value == null || certificationsInput.value == '') {
+    if (!certificationsInput.value || certificationsInput.value == '' || certificationsInput.value == null) {
         certificationsInput.classList.remove('border-success');
         certificationsInput.classList.add('border-danger');
         isValidated = false;
@@ -245,7 +220,7 @@ function validateData() {
         certifications: certificationsInput.value
     };
 
-    const inputs = {
+    const inputs = [
         nameInput,
         addressInput,
         emailInput,
@@ -257,8 +232,12 @@ function validateData() {
         educationInput,
         skillsInput,
         certificationsInput
+    ];
+
+    for (const input of inputs) {
+        input.value = '';
+        input.classList.remove('border-success');
     }
 
-    clearInputs(inputs);
     generateCv(cvData);
 }
