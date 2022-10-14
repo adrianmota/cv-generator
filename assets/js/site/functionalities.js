@@ -27,6 +27,8 @@ function generateList(data, element) {
     for (const content of data) {
         const listItem = document.createElement('li');
         listItem.innerText = content;
+        if (element.id == 'experience-content')
+            listItem.classList.add('m-2', 'mt-0', 'mb-0');
         element.appendChild(listItem);
     }
 }
@@ -87,7 +89,7 @@ function generateCv(data) {
         if (skillsAmount % 2 == 1 && i + 1 == skillsAmount) {
             const li = document.createElement('li');
             li.innerText = skillsData[i];
-            li.classList.add('m-4', 'mt-0', 'mb-0', 'w-50');
+            li.classList.add('m-2', 'mt-0', 'mb-0', 'w-50');
             rows[counter].appendChild(li);
             break;
         }
@@ -96,8 +98,8 @@ function generateCv(data) {
         const secondLi = document.createElement('li');
         firstLi.innerText = skillsData[i];
         secondLi.innerText = skillsData[i + 1];
-        firstLi.classList.add('m-4', 'mt-0', 'mb-0', 'w-50');
-        secondLi.classList.add('m-4', 'mt-0', 'mb-0', 'w-50');
+        firstLi.classList.add('m-2', 'mt-0', 'mb-0', 'w-50');
+        secondLi.classList.add('m-2', 'mt-0', 'mb-0', 'w-50');
         rows[counter].appendChild(firstLi);
         rows[counter].appendChild(secondLi);
         counter++;
@@ -107,8 +109,7 @@ function generateCv(data) {
         skillsContent.appendChild(row);
     }
 
-    const cv = document.getElementById('cv');
-    cv.classList.remove('d-none');
+    document.getElementById('cv').classList.remove('d-none');
 }
 
 function validateData() {
