@@ -58,7 +58,7 @@ function generateCv(data) {
     addressContent.innerText = data.address;
     emailContent.innerText = data.email;
     phoneContent.innerText = data.phone;
-    websiteContent.innerText = data.phone;
+    websiteContent.innerText = data.website;
     summaryContent.innerText = data.summary;
 
     const languagesData = data.languages.split(',');
